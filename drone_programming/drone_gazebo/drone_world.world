@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="drone_world">
+    <!-- Include the sun -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    
+    <!-- Include the ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    
+    <!-- Include a quadrotor drone -->
+    <include>
+      <uri>model://quadrotor</uri>
+      <name>drone</name>
+      <pose>0 0 1 0 0 0</pose>
+    </include>
+  </world>
+</sdf> 

@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="enhanced_drone_world">
+    <!-- Include the sun for lighting -->
+    <include>
+      <uri>file:///Users/maximilianmckone/.gazebo/models/gazebo_models/sun</uri>
+    </include>
+    
+    <!-- Include the ground plane -->
+    <include>
+      <uri>file:///Users/maximilianmckone/.gazebo/models/gazebo_models/ground_plane</uri>
+    </include>
+    
+    <!-- Include a quadrotor drone -->
+    <include>
+      <uri>file:///Users/maximilianmckone/Desktop/drone_programming/drone_gazebo/models/quadrotor</uri>
+      <name>drone</name>
+      <pose>0 0 2 0 0 0</pose>
+    </include>
+    
+    <!-- Add a simple box obstacle -->
+    <model name="obstacle">
+      <pose>5 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf> 
