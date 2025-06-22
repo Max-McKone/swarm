@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="stable_drone_world">
+    <!-- Include the sun for lighting -->
+    <include>
+      <uri>file:///Users/maximilianmckone/.gazebo/models/gazebo_models/sun</uri>
+    </include>
+    
+    <!-- Include the ground plane -->
+    <include>
+      <uri>file:///Users/maximilianmckone/.gazebo/models/gazebo_models/ground_plane</uri>
+    </include>
+    
+    <!-- Include a quadrotor drone -->
+    <include>
+      <uri>file:///Users/maximilianmckone/Desktop/drone_programming/drone_gazebo/models/quadrotor</uri>
+      <name>drone</name>
+      <pose>0 0 2 0 0 0</pose>
+    </include>
+    
+    <!-- Physics settings -->
+    <physics name="default_physics" default="0" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <gravity>0 0 -9.81</gravity>
+    </physics>
+  </world>
+</sdf> 

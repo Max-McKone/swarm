@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="simple_drone_world">
+    <!-- Include a quadrotor drone -->
+    <include>
+      <uri>file:///Users/maximilianmckone/Desktop/drone_programming/drone_gazebo/models/quadrotor</uri>
+      <name>drone</name>
+      <pose>0 0 1 0 0 0</pose>
+    </include>
+  </world>
+</sdf> 
